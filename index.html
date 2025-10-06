@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share links quickly and easily">
+    <title>Link Share - Share Your Links</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔗 Link Share</h1>
+            <p class="subtitle">Share your links quickly and easily</p>
+        </header>
+
+        <main>
+            <div class="link-input-section">
+                <input 
+                    type="url" 
+                    id="linkInput" 
+                    placeholder="Enter your link here..." 
+                    aria-label="Link URL input"
+                >
+                <button id="shareBtn" class="primary-btn">
+                    Share Link
+                </button>
+            </div>
+
+            <div id="linkDisplay" class="link-display hidden">
+                <div class="link-box">
+                    <input 
+                        type="text" 
+                        id="generatedLink" 
+                        readonly 
+                        aria-label="Generated shareable link"
+                    >
+                    <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                        📋 Copy
+                    </button>
+                </div>
+                <p class="success-message hidden" id="successMessage">
+                    ✓ Link copied to clipboard!
+                </p>
+            </div>
+
+            <div class="shared-links-section">
+                <h2>Recent Links</h2>
+                <ul id="linksList" class="links-list">
+                    <li class="empty-state">No links shared yet</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Simple link sharing made easy</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
